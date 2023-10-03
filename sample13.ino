@@ -14,6 +14,19 @@ void setup()
 
 void loop()
 {
-    // 以下に資料のコードを入力しなさい
-
+    // 以下のコードを入力しなさい
+    bool buttonPress = buttonA.getSingleDebouncedPress();
+    if(buttonPress == true)
+    {
+        for(int speed = 0; speed < MaxSpeed; speed++)
+        {
+            motors.setSpeeds(speed, speed);
+            delay(5);
+        }
+        for(int speed = MaxSpeed; speed >= 0; speed--)
+        {
+            motors.setSpeeds(speed, speed);
+            delay(5);
+        }
+    }
 }
