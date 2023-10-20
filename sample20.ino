@@ -69,33 +69,14 @@ void showReadings()
 
 void setup()
 {
-    // 以下のコードを入力する
-    lineSensors.initFiveSensors();
-    loadCustomCharacters();
-    buzzer.play(">g32>>c32");
-    display.clear();
-    display.print(F("Press A"));
-    display.gotoXY(0, 1);
-    display.print(F("to calib"));
-    buttonA.waitForButton();
-    calibrateSensors();
-    showReadings();
-    display.clear();
-    display.print(F("Go!"));
-    buzzer.play("L16 cdegreg4");
-    while(buzzer.isPlaying());
+
+
+
 }
 
 void loop()
 {
-    // 以下のコードを入力する
-    int16_t position = lineSensors.readLine(lineSensorValues);
-    int16_t error = position - 2000;
-    int16_t speedDifference = 0.25 * error + 6 * (error - lastError);
-    lastError = error;
-    int16_t leftSpeed = (int16_t)maxSpeed + speedDifference;
-    int16_t rightSpeed = (int16_t)maxSpeed - speedDifference;
-    leftSpeed = constrain(leftSpeed, 0, (int16_t)maxSpeed);
-    rightSpeed = constrain(rightSpeed, 0, (int16_t)maxSpeed);
-    motors.setSpeeds(leftSpeed, rightSpeed);
+
+
+
 }
